@@ -1,0 +1,39 @@
+bludger velocidad https://hypertextbook.com/facts/2006/bludger.shtml#	
+rango no definido sobre motos en velocidad https://screenrant.com/ranked-broomsticks-harry-potter-speed/
+posiciones
+chaser, seeker, beater, and keeper
+cazador buscador bateador  guardian
+En Quidditch, cada equipo está formado por 7 jugadores. Un buscador, un guardián, dos bateadores y tres cazadores, cada uno de los cuales tiene una tarea específica.
+bludger pesa de 1 a 2kg 65kg(si son de hierro puro)
+25cm diametro velocidad promedio de 100kmh
+snitch dorada 
+Quaffle 30 cm
+motos alrededor de  60-80 mph 100km/h 130km/h 
+
+DATOS QUE DEBE TENER CADA JUGADOR(
+tipo de moto
+nombre
+fuerza# capacidad de empujar golpear o mover algun objeto
+agilidad # define que tantos movimientos puedes hacer en un determinado tiempo
+resistencia #capacidad para resistir golpes y mantener stats cuando cae todos los demas stats lo hacen porporcionalmente
+)
+#EQUIPOS
+opte por usar 8 equipos en posiciones cardinales de Norte Sur este y oeste
+los nombres de las mascotas seran
+hydra?
+N  los dragones del norte
+S  los basiliscos del sur
+E  los fenix del este
+W  las sirenas del oeste
+NW los grifos del noroeste
+NE las manticoras del noreste
+SW los minotauros del suroeste
+SE los yetis del sureste
+DATOS QUE DEBEN LLEVAR TODAS LAS ESCOBAS{
+velocidad 
+aceleracion
+maniobrabilidad
+}
+creditos de gente que me ayudo en la investigacion
+valmg7(persona en discord)
+

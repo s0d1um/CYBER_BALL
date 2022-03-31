@@ -1,0 +1,393 @@
+import os 
+import glob# to import multiple pythons files 
+# Path 
+CURR_DIR2 = os.path.dirname(os.path.realpath(__file__))
+CURR_DIR2 = CURR_DIR2+"/"
+#print(CURR_DIR2)
+bandera_chasers = 0
+bandera_beaters = 0
+
+jugadores1 = {}
+chaser1_equipo1 = {}#equipo 1 locales
+chaser2_equipo1 = {}
+chaser3_equipo1 = {}
+beater1_equipo1 = {}
+beater2_equipo1 = {}
+keeper_equipo1  = {}
+seeker_equipo1  = {}
+
+jugador = "jugador"
+r1 = 19 # range minimo
+r2 = 100 #range maximo 
+
+#for i in range(r1,r2):#es para no tener que escribir el codigo que importa cada jugador
+#    print ("    if jugadores1[",i,"]==True:")
+#    print ("        from locales.jugador",end='')
+#    print (i,end='')
+#    print (".jugador",end='')
+#    print (i,"import *")
+#    print ("        definir_jugador()")
+for i in range(0,1):#se llenan los jugadores con datos por default
+	for f in range (0,10): chaser1_equipo1[f] = "0"
+	for f in range (0,10): chaser2_equipo1[f] = "0"
+	for f in range (0,10): chaser3_equipo1[f] = "0"
+
+	for f in range (0,10): beater1_equipo1[f] = "0"
+	for f in range (0,10): beater2_equipo1[f] = "0"
+
+	for f in range (0,10): keeper_equipo1[f]  = "0"
+	for f in range (0,10): seeker_equipo1[f]  = "0"
+for x in range(r1,r2):#analiza si existe jugadores en x carpeta
+    number = str(x) 
+    path = CURR_DIR2+jugador+number+"/"+jugador+number+".py"#/home/user/jugadorx/jugadorx.py
+    isFile = os.path.isfile(path)
+    if isFile == True:
+      #  print("jugador",x,"detectado en:")
+      #  print(path)
+        jugadores1[x]=True
+    else:jugadores1[x]=False
+def definir_jugador():#se definen los datos dependiendo del jugador
+    global bandera_beaters
+    global bandera_chasers
+    global numero,clase
+    global chaser1_equipo1_IA,chaser2_equipo1_IA,chaser3_equipo1_IA,beater1_equipo1_IA,beater2_equipo1_IA,keeper_equipo1_IA,seeker_equipo1_IA
+    if clase == "chaser":
+        bandera_chasers += 1
+        if bandera_chasers == 1:
+            chaser1_equipo1[0] = numero
+            chaser1_equipo1[1] = clase
+            chaser1_equipo1[2] = nombre
+            chaser1_equipo1[3] = moto_name
+            chaser1_equipo1[4] = velocidad#(moto[0]*1000)/3600#Km/h convertido a m/s
+            chaser1_equipo1[5] = aceleracion# moto[1]#de 0 a 100 en x segundos
+            chaser1_equipo1[6] = maniobrabilidad# moto[2]#%
+            chaser1_equipo1[7] = fuerza#capacidad de empujar golpear o mover algun objeto
+            chaser1_equipo1[8] = suerte#probabilidad con la que te puede golpear o no algo si llega  a 0 la probabilidad es 100%
+            chaser1_equipo1[9] = resistencia#capacidad para resistir golpes y mantener stats cuando cae todos los demas stats lo hacen porporcionalmente
+            chaser1_equipo1[10]= team
+            chaser1_equipo1_IA = listaRecuperada
+        if bandera_chasers == 2:
+            chaser2_equipo1[0] = numero
+            chaser2_equipo1[1] = clase
+            chaser2_equipo1[2] = nombre
+            chaser2_equipo1[3] = moto_name
+            chaser2_equipo1[4] = velocidad#(moto[0]*1000)/3600#Km/h convertido a m/s
+            chaser2_equipo1[5] = aceleracion# moto[1]#de 0 a 100 en x segundos
+            chaser2_equipo1[6] = maniobrabilidad# moto[2]#%
+            chaser2_equipo1[7] = fuerza#capacidad de empujar golpear o mover algun objeto
+            chaser2_equipo1[8] = suerte#probabilidad con la que te puede golpear o no algo si llega  a 0 la probabilidad es 100%
+            chaser2_equipo1[9] = resistencia#capacidad para resistir golpes y mantener stats cuando cae todos los demas stats lo hacen porporcionalmente
+            chaser2_equipo1[10]= team
+            chaser2_equipo1_IA = listaRecuperada
+        if bandera_chasers == 3:
+            chaser3_equipo1[0] = numero
+            chaser3_equipo1[1] = clase
+            chaser3_equipo1[2] = nombre
+            chaser3_equipo1[3] = moto_name
+            chaser3_equipo1[4] = velocidad#(moto[0]*1000)/3600#Km/h convertido a m/s
+            chaser3_equipo1[5] = aceleracion# moto[1]#de 0 a 100 en x segundos
+            chaser3_equipo1[6] = maniobrabilidad# moto[2]#%
+            chaser3_equipo1[7] = fuerza#capacidad de empujar golpear o mover algun objeto
+            chaser3_equipo1[8] = suerte#probabilidad con la que te puede golpear o no algo si llega  a 0 la probabilidad es 100%
+            chaser3_equipo1[9] = resistencia#capacidad para resistir golpes y mantener stats cuando cae todos los demas stats lo hacen porporcionalmente
+            chaser3_equipo1[10]= team
+            chaser3_equipo1_IA = listaRecuperada
+    if clase == "beater":
+        bandera_beaters += 1
+        if bandera_beaters == 1:
+            beater1_equipo1[0] = numero
+            beater1_equipo1[1] = clase
+            beater1_equipo1[2] = nombre
+            beater1_equipo1[3] = moto_name
+            beater1_equipo1[4] = velocidad#(moto[0]*1000)/3600#Km/h convertido a m/s
+            beater1_equipo1[5] = aceleracion# moto[1]#de 0 a 100 en x segundos
+            beater1_equipo1[6] = maniobrabilidad# moto[2]#%
+            beater1_equipo1[7] = fuerza#capacidad de empujar golpear o mover algun objeto
+            beater1_equipo1[8] = suerte#probabilidad con la que te puede golpear o no algo si llega  a 0 la probabilidad es 100%
+            beater1_equipo1[9] = resistencia#capacidad para resistir golpes y mantener stats cuando cae todos los demas stats lo hacen porporcionalmente
+            beater1_equipo1[10]= team
+            beater1_equipo1_IA = listaRecuperada
+        if bandera_beaters == 2:
+            beater2_equipo1[0] = numero
+            beater2_equipo1[1] = clase
+            beater2_equipo1[2] = nombre
+            beater2_equipo1[3] = moto_name
+            beater2_equipo1[4] = velocidad#(moto[0]*1000)/3600#Km/h convertido a m/s
+            beater2_equipo1[5] = aceleracion# moto[1]#de 0 a 100 en x segundos
+            beater2_equipo1[6] = maniobrabilidad# moto[2]#%
+            beater2_equipo1[7] = fuerza#capacidad de empujar golpear o mover algun objeto
+            beater2_equipo1[8] = suerte#probabilidad con la que te puede golpear o no algo si llega  a 0 la probabilidad es 100%
+            beater2_equipo1[9] = resistencia#capacidad para resistir golpes y mantener stats cuando cae todos los demas stats lo hacen porporcionalmente
+            beater2_equipo1[10]= team
+            beater2_equipo1_IA = listaRecuperada
+    if clase == "keeper":
+        keeper_equipo1[0] = numero
+        keeper_equipo1[1] = clase
+        keeper_equipo1[2] = nombre
+        keeper_equipo1[3] = moto_name
+        keeper_equipo1[4] = velocidad#(moto[0]*1000)/3600#Km/h convertido a m/s
+        keeper_equipo1[5] = aceleracion# moto[1]#de 0 a 100 en x segundos
+        keeper_equipo1[6] = maniobrabilidad# moto[2]#%
+        keeper_equipo1[7] = fuerza#capacidad de empujar golpear o mover algun objeto
+        keeper_equipo1[8] = suerte#probabilidad con la que te puede golpear o no algo si llega  a 0 la probabilidad es 100%
+        keeper_equipo1[9] = resistencia#capacidad para resistir golpes y mantener stats cuando cae todos los demas stats lo hacen porporcionalmente
+        keeper_equipo1[10]= team
+        keeper_equipo1_IA = listaRecuperada
+    if clase == "seeker":
+        seeker_equipo1[0] = numero
+        seeker_equipo1[1] = clase
+        seeker_equipo1[2] = nombre
+        seeker_equipo1[3] = moto_name
+        seeker_equipo1[4] = velocidad#(moto[0]*1000)/3600#Km/h convertido a m/s
+        seeker_equipo1[5] = aceleracion# moto[1]#de 0 a 100 en x segundos
+        seeker_equipo1[6] = maniobrabilidad# moto[2]#%
+        seeker_equipo1[7] = fuerza#capacidad de empujar golpear o mover algun objeto
+        seeker_equipo1[8] = suerte#probabilidad con la que te puede golpear o no algo si llega  a 0 la probabilidad es 100%
+        seeker_equipo1[9] = resistencia#capacidad para resistir golpes y mantener stats cuando cae todos los demas stats lo hacen porporcionalmente
+        seeker_equipo1[10]= team
+        seeker_equipo1_IA = listaRecuperada
+for i in range(0,1):#importar caracteristicas 1 por 1
+    if jugadores1[ 19 ]==True:
+        from locales.jugador19.jugador19 import *
+        definir_jugador()
+    if jugadores1[ 20 ]==True:
+        from locales.jugador20.jugador20 import *
+        definir_jugador()
+    if jugadores1[ 21 ]==True:
+        from locales.jugador21.jugador21 import *
+        definir_jugador()
+    if jugadores1[ 22 ]==True:
+        from locales.jugador22.jugador22 import *
+        definir_jugador()
+    if jugadores1[ 23 ]==True:
+        from locales.jugador23.jugador23 import *
+        definir_jugador()
+    if jugadores1[ 24 ]==True:
+        from locales.jugador24.jugador24 import *
+        definir_jugador()
+    if jugadores1[ 25 ]==True:
+        from locales.jugador25.jugador25 import *
+        definir_jugador()
+    if jugadores1[ 26 ]==True:
+        from locales.jugador26.jugador26 import *
+        definir_jugador()
+    if jugadores1[ 27 ]==True:
+        from locales.jugador27.jugador27 import *
+        definir_jugador()
+    if jugadores1[ 28 ]==True:
+        from locales.jugador28.jugador28 import *
+        definir_jugador()
+    if jugadores1[ 29 ]==True:
+        from locales.jugador29.jugador29 import *
+        definir_jugador()
+    if jugadores1[ 30 ]==True:
+        from locales.jugador30.jugador30 import *
+        definir_jugador()
+    if jugadores1[ 31 ]==True:
+        from locales.jugador31.jugador31 import *
+        definir_jugador()
+    if jugadores1[ 32 ]==True:
+        from locales.jugador32.jugador32 import *
+        definir_jugador()
+    if jugadores1[ 33 ]==True:
+        from locales.jugador33.jugador33 import *
+        definir_jugador()
+    if jugadores1[ 34 ]==True:
+        from locales.jugador34.jugador34 import *
+        definir_jugador()
+    if jugadores1[ 35 ]==True:
+        from locales.jugador35.jugador35 import *
+        definir_jugador()
+    if jugadores1[ 36 ]==True:
+        from locales.jugador36.jugador36 import *
+        definir_jugador()
+    if jugadores1[ 37 ]==True:
+        from locales.jugador37.jugador37 import *
+        definir_jugador()
+    if jugadores1[ 38 ]==True:
+        from locales.jugador38.jugador38 import *
+        definir_jugador()
+    if jugadores1[ 39 ]==True:
+        from locales.jugador39.jugador39 import *
+        definir_jugador()
+    if jugadores1[ 40 ]==True:
+        from locales.jugador40.jugador40 import *
+        definir_jugador()
+    if jugadores1[ 41 ]==True:
+        from locales.jugador41.jugador41 import *
+        definir_jugador()
+    if jugadores1[ 42 ]==True:
+        from locales.jugador42.jugador42 import *
+        definir_jugador()
+    if jugadores1[ 43 ]==True:
+        from locales.jugador43.jugador43 import *
+        definir_jugador()
+    if jugadores1[ 44 ]==True:
+        from locales.jugador44.jugador44 import *
+        definir_jugador()
+    if jugadores1[ 45 ]==True:
+        from locales.jugador45.jugador45 import *
+        definir_jugador()
+    if jugadores1[ 46 ]==True:
+        from locales.jugador46.jugador46 import *
+        definir_jugador()
+    if jugadores1[ 47 ]==True:
+        from locales.jugador47.jugador47 import *
+        definir_jugador()
+    if jugadores1[ 48 ]==True:
+        from locales.jugador48.jugador48 import *
+        definir_jugador()
+    if jugadores1[ 49 ]==True:
+        from locales.jugador49.jugador49 import *
+        definir_jugador()
+    if jugadores1[ 50 ]==True:
+        from locales.jugador50.jugador50 import *
+        definir_jugador()
+    if jugadores1[ 51 ]==True:
+        from locales.jugador51.jugador51 import *
+        definir_jugador()
+    if jugadores1[ 52 ]==True:
+        from locales.jugador52.jugador52 import *
+        definir_jugador()
+    if jugadores1[ 53 ]==True:
+        from locales.jugador53.jugador53 import *
+        definir_jugador()
+    if jugadores1[ 54 ]==True:
+        from locales.jugador54.jugador54 import *
+        definir_jugador()
+    if jugadores1[ 55 ]==True:
+        from locales.jugador55.jugador55 import *
+        definir_jugador()
+    if jugadores1[ 56 ]==True:
+        from locales.jugador56.jugador56 import *
+        definir_jugador()
+    if jugadores1[ 57 ]==True:
+        from locales.jugador57.jugador57 import *
+        definir_jugador()
+    if jugadores1[ 58 ]==True:
+        from locales.jugador58.jugador58 import *
+        definir_jugador()
+    if jugadores1[ 59 ]==True:
+        from locales.jugador59.jugador59 import *
+        definir_jugador()
+    if jugadores1[ 60 ]==True:
+        from locales.jugador60.jugador60 import *
+        definir_jugador()
+    if jugadores1[ 61 ]==True:
+        from locales.jugador61.jugador61 import *
+        definir_jugador()
+    if jugadores1[ 62 ]==True:
+        from locales.jugador62.jugador62 import *
+        definir_jugador()
+    if jugadores1[ 63 ]==True:
+        from locales.jugador63.jugador63 import *
+        definir_jugador()
+    if jugadores1[ 64 ]==True:
+        from locales.jugador64.jugador64 import *
+        definir_jugador()
+    if jugadores1[ 65 ]==True:
+        from locales.jugador65.jugador65 import *
+        definir_jugador()
+    if jugadores1[ 66 ]==True:
+        from locales.jugador66.jugador66 import *
+        definir_jugador()
+    if jugadores1[ 67 ]==True:
+        from locales.jugador67.jugador67 import *
+        definir_jugador()
+    if jugadores1[ 68 ]==True:
+        from locales.jugador68.jugador68 import *
+        definir_jugador()
+    if jugadores1[ 69 ]==True:
+        from locales.jugador69.jugador69 import *
+        definir_jugador()
+    if jugadores1[ 70 ]==True:
+        from locales.jugador70.jugador70 import *
+        definir_jugador()
+    if jugadores1[ 71 ]==True:
+        from locales.jugador71.jugador71 import *
+        definir_jugador()
+    if jugadores1[ 72 ]==True:
+        from locales.jugador72.jugador72 import *
+        definir_jugador()
+    if jugadores1[ 73 ]==True:
+        from locales.jugador73.jugador73 import *
+        definir_jugador()
+    if jugadores1[ 74 ]==True:
+        from locales.jugador74.jugador74 import *
+        definir_jugador()
+    if jugadores1[ 75 ]==True:
+        from locales.jugador75.jugador75 import *
+        definir_jugador()
+    if jugadores1[ 76 ]==True:
+        from locales.jugador76.jugador76 import *
+        definir_jugador()
+    if jugadores1[ 77 ]==True:
+        from locales.jugador77.jugador77 import *
+        definir_jugador()
+    if jugadores1[ 78 ]==True:
+        from locales.jugador78.jugador78 import *
+        definir_jugador()
+    if jugadores1[ 79 ]==True:
+        from locales.jugador79.jugador79 import *
+        definir_jugador()
+    if jugadores1[ 80 ]==True:
+        from locales.jugador80.jugador80 import *
+        definir_jugador()
+    if jugadores1[ 81 ]==True:
+        from locales.jugador81.jugador81 import *
+        definir_jugador()
+    if jugadores1[ 82 ]==True:
+        from locales.jugador82.jugador82 import *
+        definir_jugador()
+    if jugadores1[ 83 ]==True:
+        from locales.jugador83.jugador83 import *
+        definir_jugador()
+    if jugadores1[ 84 ]==True:
+        from locales.jugador84.jugador84 import *
+        definir_jugador()
+    if jugadores1[ 85 ]==True:
+        from locales.jugador85.jugador85 import *
+        definir_jugador()
+    if jugadores1[ 86 ]==True:
+        from locales.jugador86.jugador86 import *
+        definir_jugador()
+    if jugadores1[ 87 ]==True:
+        from locales.jugador87.jugador87 import *
+        definir_jugador()
+    if jugadores1[ 88 ]==True:
+        from locales.jugador88.jugador88 import *
+        definir_jugador()
+    if jugadores1[ 89 ]==True:
+        from locales.jugador89.jugador89 import *
+        definir_jugador()
+    if jugadores1[ 90 ]==True:
+        from locales.jugador90.jugador90 import *
+        definir_jugador()
+    if jugadores1[ 91 ]==True:
+        from locales.jugador91.jugador91 import *
+        definir_jugador()
+    if jugadores1[ 92 ]==True:
+        from locales.jugador92.jugador92 import *
+        definir_jugador()
+    if jugadores1[ 93 ]==True:
+        from locales.jugador93.jugador93 import *
+        definir_jugador()
+    if jugadores1[ 94 ]==True:
+        from locales.jugador94.jugador94 import *
+        definir_jugador()
+    if jugadores1[ 95 ]==True:
+        from locales.jugador95.jugador95 import *
+        definir_jugador()
+    if jugadores1[ 96 ]==True:
+        from locales.jugador96.jugador96 import *
+        definir_jugador()
+    if jugadores1[ 97 ]==True:
+        from locales.jugador97.jugador97 import *
+        definir_jugador()
+    if jugadores1[ 98 ]==True:
+        from locales.jugador98.jugador98 import *
+        definir_jugador()
+    if jugadores1[ 99 ]==True:
+        from locales.jugador99.jugador99 import *
+        definir_jugador()
+

@@ -1,0 +1,17 @@
+19 chaser Cleansweep       N  Natalie Evans Walker
+21 beater Cleansweep       N  Gregory Peterson Morris
+23 chaser Cleansweep       N  Adrian Ramos Murphy
+25 beater Cleansweep       N  Rodney James Peterson
+28 chaser Cleansweep       N  Carmen Brown Cruz
+49 keeper Cleansweep       N  Marilyn Adams Moore
+58 seeker Cleansweep       N  arthur braham semitich
+
+42 beater Cleansweep       S  Isidora Castillo Williams
+53 keeper Cleansweep       S  Kimberly Reed Lopez
+55 chaser Cleansweep       S  Carlos Miller Lee
+59 beater Cleansweep       S  Jayden Campbell Wood
+67 chaser Cleansweep       S  David Cook Lewis
+72 seeker Cleansweep       S  Thomas Richardson Perez
+86 chaser Cleansweep       S  Jennifer James Cooper
+
+44 chaser Comet_Two_Ninety NW Pacífica Elise Noroeste

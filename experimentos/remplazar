@@ -1,0 +1,5 @@
+
+
+find |grep .py |perl -pi -e 's/cleansweep/MV3600/g' *.py
+grep -rl oldtext . | xargs sed -i 's/oldtext/newtext/g'
+xargs sed -i 's/oldtext/newtext/g'
