@@ -81,7 +81,7 @@ def guardar_IA50():
         f.write(str(listaRecuperada[10]))
         f.write(",")
         f.write(str(listaRecuperada[11]))
-        
+
     with open(CURR_DIR, 'wb') as f:#saves the file where is located the knoledge of the IA
             #f.write(listaRecuperada, f)
             pickle.dump(listaRecuperada, f)
