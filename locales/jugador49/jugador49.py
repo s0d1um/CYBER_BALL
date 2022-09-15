@@ -4,7 +4,7 @@ import glob# to import multiple pythons files
 nombre = "Marilyn Adams Moore"
 #nombres arthur braham onsemitich, edrick castañon ortiz,
 numero = "49"
-clase = "keeper"#seeker keeper beater chaser
+clase = "keeper"#runner keeper defender chaser
 team = "N "
 #from carpeta1.subcarpeta1.archivo3 import VERSION_REL, VERSION_ABS
 # setting path

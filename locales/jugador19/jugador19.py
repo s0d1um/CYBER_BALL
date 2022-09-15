@@ -5,7 +5,7 @@ nombre = "Natalie Evans Walker"
 #nombres arthur braham onsemitich, edrick castañon ortiz,
 numero = "19"
 team = "N "         #runner shorter defender chaser
-clase = "chaser"#seeker keeper beater chaser
+clase = "chaser"#runner keeper defender chaser
 #from carpeta1.subcarpeta1.archivo3 import VERSION_REL, VERSION_ABS
 # setting path
 #sys.path.append('/media/root/C64E-F9151/TRABAJO/CYBER_BALL')

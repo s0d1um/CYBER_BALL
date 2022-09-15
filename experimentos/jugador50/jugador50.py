@@ -4,7 +4,7 @@ import sys#to change the apend to select correctly betwen folders
 import os#to set where we are
 nombre = "name last_name"
 numero = "50"
-clase = "chaser"#seeker keeper beater chaser
+clase = "chaser"#runner keeper defender chaser
 team = "N "
 # setting path
 #sys.path.append('/media/root/C64E-F9151/TRABAJO/CYBER_BALL')

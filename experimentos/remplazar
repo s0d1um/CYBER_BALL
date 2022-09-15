@@ -1,5 +1,6 @@
 
 
-find |grep .py |perl -pi -e 's/cleansweep/MV3600/g' *.py
-grep -rl oldtext . | xargs sed -i 's/oldtext/newtext/g'
+#find |grep .py |perl -pi -e 's/cleansweep/MV3600/g' *.py#no sirve
+#grep -rl oldtext . | xargs sed -i 's/oldtext/newtext/g'# sirve
 xargs sed -i 's/oldtext/newtext/g'
+find | perl -pi -e 's/old_text/new_text/g' *.py #funciona?

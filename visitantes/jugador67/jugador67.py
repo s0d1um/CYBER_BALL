@@ -3,7 +3,7 @@ import pickle#to load the archive containing the IA
 import glob# to import multiple pythons files 
 nombre = "David Cook Lewis"
 numero = "67"
-clase = "chaser"#seeker keeper beater chaser
+clase = "chaser"#runner keeper defender chaser
 team = "S "
 #from carpeta1.subcarpeta1.archivo3 import VERSION_REL, VERSION_ABS
 # setting path

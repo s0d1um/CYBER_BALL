@@ -5,16 +5,16 @@ CURR_DIR2 = os.path.dirname(os.path.realpath(__file__))
 CURR_DIR2 = CURR_DIR2+"/"
 #print(CURR_DIR2)
 bandera_chasers = 0
-bandera_beaters = 0
+bandera_defenders = 0
 
 jugadores2 = {}
 chaser1_equipo2 = {}#equipo 1 visitantes
 chaser2_equipo2 = {}
 chaser3_equipo2 = {}
-beater1_equipo2 = {}
-beater2_equipo2 = {}
+defender1_equipo2 = {}
+defender2_equipo2 = {}
 keeper_equipo2  = {}
-seeker_equipo2  = {}
+runner_equipo2  = {}
 
 jugador = "jugador"
 r1 = 19 # range minimo
@@ -32,11 +32,11 @@ for i in range(0,1):#se llenan los jugadores con datos por default
     for f in range (0,10): chaser2_equipo2[f] = "0"
     for f in range (0,10): chaser3_equipo2[f] = "0"
 
-    for f in range (0,10): beater1_equipo2[f] = "0"
-    for f in range (0,10): beater2_equipo2[f] = "0"
+    for f in range (0,10): defender1_equipo2[f] = "0"
+    for f in range (0,10): defender2_equipo2[f] = "0"
 
     for f in range (0,10): keeper_equipo2[f]  = "0"
-    for f in range (0,10): seeker_equipo2[f]  = "0"
+    for f in range (0,10): runner_equipo2[f]  = "0"
 for x in range(r1,r2):#analiza si existe jugadores en x carpeta
     number = str(x) 
     path = CURR_DIR2+jugador+number+"/"+jugador+number+".py"#/home/user/jugadorx/jugadorx.py
@@ -47,10 +47,10 @@ for x in range(r1,r2):#analiza si existe jugadores en x carpeta
         jugadores2[x]=True
     else:jugadores2[x]=False
 def definir_jugador():#se definen los datos dependiendo del jugador
-    global bandera_beaters
+    global bandera_defenders
     global bandera_chasers
     global numero,clase
-    global chaser1_equipo2_IA,chaser2_equipo2_IA,chaser3_equipo2_IA,beater1_equipo2_IA,beater2_equipo2_IA,keeper_equipo2_IA,seeker_equipo2_IA
+    global chaser1_equipo2_IA,chaser2_equipo2_IA,chaser3_equipo2_IA,defender1_equipo2_IA,defender2_equipo2_IA,keeper_equipo2_IA,runner_equipo2_IA
     if clase == "chaser":
         bandera_chasers += 1
         if bandera_chasers == 1:
@@ -92,34 +92,34 @@ def definir_jugador():#se definen los datos dependiendo del jugador
             chaser3_equipo2[9] = resistencia#capacidad para resistir golpes y mantener stats cuando cae todos los demas stats lo hacen porporcionalmente
             chaser3_equipo2[10]= team
             chaser3_equipo2_IA = listaRecuperada
-    if clase == "beater":
-        bandera_beaters += 1
-        if bandera_beaters == 1:
-            beater1_equipo2[0] = numero
-            beater1_equipo2[1] = clase
-            beater1_equipo2[2] = nombre
-            beater1_equipo2[3] = moto_name
-            beater1_equipo2[4] = velocidad#(moto[0]*1000)/3600#Km/h convertido a m/s
-            beater1_equipo2[5] = aceleracion# moto[1]#de 0 a 100 en x segundos
-            beater1_equipo2[6] = maniobrabilidad# moto[2]#%
-            beater1_equipo2[7] = fuerza#capacidad de empujar golpear o mover algun objeto
-            beater1_equipo2[8] = suerte#probabilidad con la que te puede golpear o no algo si llega  a 0 la probabilidad es 100%
-            beater1_equipo2[9] = resistencia#capacidad para resistir golpes y mantener stats cuando cae todos los demas stats lo hacen porporcionalmente
-            beater1_equipo2[10]= team
-            beater1_equipo2_IA = listaRecuperada
-        if bandera_beaters == 2:
-            beater2_equipo2[0] = numero
-            beater2_equipo2[1] = clase
-            beater2_equipo2[2] = nombre
-            beater2_equipo2[3] = moto_name
-            beater2_equipo2[4] = velocidad#(moto[0]*1000)/3600#Km/h convertido a m/s
-            beater2_equipo2[5] = aceleracion# moto[1]#de 0 a 100 en x segundos
-            beater2_equipo2[6] = maniobrabilidad# moto[2]#%
-            beater2_equipo2[7] = fuerza#capacidad de empujar golpear o mover algun objeto
-            beater2_equipo2[8] = suerte#probabilidad con la que te puede golpear o no algo si llega  a 0 la probabilidad es 100%
-            beater2_equipo2[9] = resistencia#capacidad para resistir golpes y mantener stats cuando cae todos los demas stats lo hacen porporcionalmente
-            beater2_equipo2[10]= team
-            beater2_equipo2_IA = listaRecuperada
+    if clase == "defender":
+        bandera_defenders += 1
+        if bandera_defenders == 1:
+            defender1_equipo2[0] = numero
+            defender1_equipo2[1] = clase
+            defender1_equipo2[2] = nombre
+            defender1_equipo2[3] = moto_name
+            defender1_equipo2[4] = velocidad#(moto[0]*1000)/3600#Km/h convertido a m/s
+            defender1_equipo2[5] = aceleracion# moto[1]#de 0 a 100 en x segundos
+            defender1_equipo2[6] = maniobrabilidad# moto[2]#%
+            defender1_equipo2[7] = fuerza#capacidad de empujar golpear o mover algun objeto
+            defender1_equipo2[8] = suerte#probabilidad con la que te puede golpear o no algo si llega  a 0 la probabilidad es 100%
+            defender1_equipo2[9] = resistencia#capacidad para resistir golpes y mantener stats cuando cae todos los demas stats lo hacen porporcionalmente
+            defender1_equipo2[10]= team
+            defender1_equipo2_IA = listaRecuperada
+        if bandera_defenders == 2:
+            defender2_equipo2[0] = numero
+            defender2_equipo2[1] = clase
+            defender2_equipo2[2] = nombre
+            defender2_equipo2[3] = moto_name
+            defender2_equipo2[4] = velocidad#(moto[0]*1000)/3600#Km/h convertido a m/s
+            defender2_equipo2[5] = aceleracion# moto[1]#de 0 a 100 en x segundos
+            defender2_equipo2[6] = maniobrabilidad# moto[2]#%
+            defender2_equipo2[7] = fuerza#capacidad de empujar golpear o mover algun objeto
+            defender2_equipo2[8] = suerte#probabilidad con la que te puede golpear o no algo si llega  a 0 la probabilidad es 100%
+            defender2_equipo2[9] = resistencia#capacidad para resistir golpes y mantener stats cuando cae todos los demas stats lo hacen porporcionalmente
+            defender2_equipo2[10]= team
+            defender2_equipo2_IA = listaRecuperada
     if clase == "keeper":
         keeper_equipo2[0] = numero
         keeper_equipo2[1] = clase
@@ -133,19 +133,19 @@ def definir_jugador():#se definen los datos dependiendo del jugador
         keeper_equipo2[9] = resistencia#capacidad para resistir golpes y mantener stats cuando cae todos los demas stats lo hacen porporcionalmente
         keeper_equipo2[10]= team
         keeper_equipo2_IA = listaRecuperada
-    if clase == "seeker":
-        seeker_equipo2[0] = numero
-        seeker_equipo2[1] = clase
-        seeker_equipo2[2] = nombre
-        seeker_equipo2[3] = moto_name
-        seeker_equipo2[4] = velocidad#(moto[0]*1000)/3600#Km/h convertido a m/s
-        seeker_equipo2[5] = aceleracion# moto[1]#de 0 a 100 en x segundos
-        seeker_equipo2[6] = maniobrabilidad# moto[2]#%
-        seeker_equipo2[7] = fuerza#capacidad de empujar golpear o mover algun objeto
-        seeker_equipo2[8] = suerte#probabilidad con la que te puede golpear o no algo si llega  a 0 la probabilidad es 100%
-        seeker_equipo2[9] = resistencia#capacidad para resistir golpes y mantener stats cuando cae todos los demas stats lo hacen porporcionalmente
-        seeker_equipo2[10]= team
-        seeker_equipo2_IA = listaRecuperada
+    if clase == "runner":
+        runner_equipo2[0] = numero
+        runner_equipo2[1] = clase
+        runner_equipo2[2] = nombre
+        runner_equipo2[3] = moto_name
+        runner_equipo2[4] = velocidad#(moto[0]*1000)/3600#Km/h convertido a m/s
+        runner_equipo2[5] = aceleracion# moto[1]#de 0 a 100 en x segundos
+        runner_equipo2[6] = maniobrabilidad# moto[2]#%
+        runner_equipo2[7] = fuerza#capacidad de empujar golpear o mover algun objeto
+        runner_equipo2[8] = suerte#probabilidad con la que te puede golpear o no algo si llega  a 0 la probabilidad es 100%
+        runner_equipo2[9] = resistencia#capacidad para resistir golpes y mantener stats cuando cae todos los demas stats lo hacen porporcionalmente
+        runner_equipo2[10]= team
+        runner_equipo2_IA = listaRecuperada
 for i in range(0,1):#importar caracteristicas 1 por 1
     if jugadores2[ 19 ]==True:
         from visitantes.jugador19.jugador19 import *

@@ -64,24 +64,24 @@ agarre_orb = 0#corroborar si el orb esta siendo sostenido o no y en ese caso cae
 # initial score
 score1 = 0#equipo 1 locales
 score2 = 0#equipo 2 visitantes
-# formacion inicial chaser 3, seeker 1, beater 2, keeper 1
+# formacion inicial chaser 3, runner 1, defender 2, keeper 1
 for x in range(0,1):#jugadores posiciones
-    #equipo 1 
+    #equipo 1
     chaser1_equipo1_pos = [380, 180, 220]
     chaser2_equipo1_pos = [380, 220, 220]
     chaser3_equipo1_pos = [380, 260, 220]
-    seeker_equipo1_pos  = [460, 220, 220]
-    beater1_equipo1_pos = [420, 200, 220]
-    beater2_equipo1_pos = [420, 240, 220]
+    runner_equipo1_pos  = [460, 220, 220]
+    defender1_equipo1_pos = [420, 200, 220]
+    defender2_equipo1_pos = [420, 240, 220]
     keeper_equipo1_pos  = [340, 220, 220]
 
     #equipo2
     chaser1_equipo2_pos = [860, 180, 220]
     chaser2_equipo2_pos = [860, 220, 220]
     chaser3_equipo2_pos = [860, 260, 220]
-    seeker_equipo2_pos  = [780, 220, 220]
-    beater1_equipo2_pos = [820, 200, 220]
-    beater2_equipo2_pos = [820, 240, 220]
+    runner_equipo2_pos  = [780, 220, 220]
+    defender1_equipo2_pos = [820, 200, 220]
+    defender2_equipo2_pos = [820, 240, 220]
     keeper_equipo2_pos  = [900, 220, 220]
 for x in range(0,1):#objetos del juego
     orb_pos =             [620, 220, 220]#xyz
@@ -134,21 +134,21 @@ def show_score(choice, color, font, size):
             chaser2_equipo1_surface = my_font2.render(chaser2_equipo1[0], True, pink)
         chaser3_equipo1_surface = my_font2.render(chaser3_equipo1[0], True, pink)
 
-        beater1_equipo1_surface = my_font2.render(beater1_equipo1[0], True, pink)
-        beater2_equipo1_surface = my_font2.render(beater2_equipo1[0], True, pink)
+        defender1_equipo1_surface = my_font2.render(defender1_equipo1[0], True, pink)
+        defender2_equipo1_surface = my_font2.render(defender2_equipo1[0], True, pink)
 
         keeper_equipo1_surface = my_font2.render(keeper_equipo1[0], True, pink)
-        seeker_equipo1_surface = my_font2.render(seeker_equipo1[0], True, pink)
+        runner_equipo1_surface = my_font2.render(runner_equipo1[0], True, pink)
     for c in range (0,1):#equipo 2 visitantes
         chaser1_equipo2_surface = my_font2.render(chaser1_equipo2[0], True, cian)
         chaser2_equipo2_surface = my_font2.render(chaser2_equipo2[0], True, cian)
         chaser3_equipo2_surface = my_font2.render(chaser3_equipo2[0], True, cian)
 
-        beater1_equipo2_surface = my_font2.render(beater1_equipo2[0], True, cian)
-        beater2_equipo2_surface = my_font2.render(beater2_equipo2[0], True, cian)
+        defender1_equipo2_surface = my_font2.render(defender1_equipo2[0], True, cian)
+        defender2_equipo2_surface = my_font2.render(defender2_equipo2[0], True, cian)
 
         keeper_equipo2_surface = my_font2.render(keeper_equipo2[0], True, cian)
-        seeker_equipo2_surface = my_font2.render(seeker_equipo2[0], True, cian)
+        runner_equipo2_surface = my_font2.render(runner_equipo2[0], True, cian)
 
     bulldozer1_surface = my_font2.render("B1", True, yellow)
     # create a rectangular object for the
@@ -159,41 +159,41 @@ def show_score(choice, color, font, size):
             chaser2_equipo1_rect = chaser2_equipo1_surface.get_rect()
             chaser3_equipo1_rect = chaser3_equipo1_surface.get_rect()
 
-            beater1_equipo1_rect = beater1_equipo1_surface.get_rect()
-            beater2_equipo1_rect = beater2_equipo1_surface.get_rect()
+            defender1_equipo1_rect = defender1_equipo1_surface.get_rect()
+            defender2_equipo1_rect = defender2_equipo1_surface.get_rect()
 
             keeper_equipo1_rect = keeper_equipo1_surface.get_rect()
-            seeker_equipo1_rect = seeker_equipo1_surface.get_rect()
+            runner_equipo1_rect = runner_equipo1_surface.get_rect()
                                                         ########PRESPECTIVA XZ
             chaser1_equipo1_rectXZ = chaser1_equipo1_surface.get_rect()
             chaser2_equipo1_rectXZ = chaser2_equipo1_surface.get_rect()
             chaser3_equipo1_rectXZ = chaser3_equipo1_surface.get_rect()
 
-            beater1_equipo1_rectXZ = beater1_equipo1_surface.get_rect()
-            beater2_equipo1_rectXZ = beater2_equipo1_surface.get_rect()
+            defender1_equipo1_rectXZ = defender1_equipo1_surface.get_rect()
+            defender2_equipo1_rectXZ = defender2_equipo1_surface.get_rect()
 
             keeper_equipo1_rectXZ = keeper_equipo1_surface.get_rect()
-            seeker_equipo1_rectXZ = seeker_equipo1_surface.get_rect()
+            runner_equipo1_rectXZ = runner_equipo1_surface.get_rect()
         for c in range (0,1):#equipo 2
             chaser1_equipo2_rect = chaser1_equipo2_surface.get_rect()
             chaser2_equipo2_rect = chaser2_equipo2_surface.get_rect()
             chaser3_equipo2_rect = chaser3_equipo2_surface.get_rect()
 
-            beater1_equipo2_rect = beater1_equipo2_surface.get_rect()
-            beater2_equipo2_rect = beater2_equipo2_surface.get_rect()
+            defender1_equipo2_rect = defender1_equipo2_surface.get_rect()
+            defender2_equipo2_rect = defender2_equipo2_surface.get_rect()
 
             keeper_equipo2_rect = keeper_equipo2_surface.get_rect()
-            seeker_equipo2_rect = seeker_equipo2_surface.get_rect()
+            runner_equipo2_rect = runner_equipo2_surface.get_rect()
                                                         ########PRESPECTIVA XZ
             chaser1_equipo2_rectXZ = chaser1_equipo2_surface.get_rect()
             chaser2_equipo2_rectXZ = chaser2_equipo2_surface.get_rect()
             chaser3_equipo2_rectXZ = chaser3_equipo2_surface.get_rect()
 
-            beater1_equipo2_rectXZ = beater1_equipo2_surface.get_rect()
-            beater2_equipo2_rectXZ = beater2_equipo2_surface.get_rect()
+            defender1_equipo2_rectXZ = defender1_equipo2_surface.get_rect()
+            defender2_equipo2_rectXZ = defender2_equipo2_surface.get_rect()
 
             keeper_equipo2_rectXZ = keeper_equipo2_surface.get_rect()
-            seeker_equipo2_rectXZ = seeker_equipo2_surface.get_rect()
+            runner_equipo2_rectXZ = runner_equipo2_surface.get_rect()
     bulldozer1_rect = bulldozer1_surface.get_rect()
     # setting position of the text
     for i in range (0,1):
@@ -202,41 +202,41 @@ def show_score(choice, color, font, size):
             chaser2_equipo1_rect.midtop = (chaser2_equipo1_pos[0]+5, chaser2_equipo1_pos[1]-17)
             chaser3_equipo1_rect.midtop = (chaser3_equipo1_pos[0]+5, chaser3_equipo1_pos[1]-17)
 
-            beater1_equipo1_rect.midtop = (beater1_equipo1_pos[0]+5, beater1_equipo1_pos[1]-17)
-            beater2_equipo1_rect.midtop = (beater2_equipo1_pos[0]+5, beater2_equipo1_pos[1]-17)
+            defender1_equipo1_rect.midtop = (defender1_equipo1_pos[0]+5, defender1_equipo1_pos[1]-17)
+            defender2_equipo1_rect.midtop = (defender2_equipo1_pos[0]+5, defender2_equipo1_pos[1]-17)
 
             keeper_equipo1_rect.midtop = (keeper_equipo1_pos[0]+5, keeper_equipo1_pos[1]-17)
-            seeker_equipo1_rect.midtop = (seeker_equipo1_pos[0]+5, seeker_equipo1_pos[1]-17)
+            runner_equipo1_rect.midtop = (runner_equipo1_pos[0]+5, runner_equipo1_pos[1]-17)
             ########PRESPECTIVA XZ
             chaser1_equipo1_rectXZ.midtop = (chaser1_equipo1_pos[0]+5,z0-chaser1_equipo1_pos[2]-17)
             chaser2_equipo1_rectXZ.midtop = (chaser2_equipo1_pos[0]+5,z0-chaser2_equipo1_pos[2]-17)
             chaser3_equipo1_rectXZ.midtop = (chaser3_equipo1_pos[0]+5,z0-chaser3_equipo1_pos[2]-17)
 
-            beater1_equipo1_rectXZ.midtop = (beater1_equipo1_pos[0]+5,z0-beater1_equipo1_pos[2]-17)
-            beater2_equipo1_rectXZ.midtop = (beater2_equipo1_pos[0]+5,z0-beater2_equipo1_pos[2]-17)
+            defender1_equipo1_rectXZ.midtop = (defender1_equipo1_pos[0]+5,z0-defender1_equipo1_pos[2]-17)
+            defender2_equipo1_rectXZ.midtop = (defender2_equipo1_pos[0]+5,z0-defender2_equipo1_pos[2]-17)
 
             keeper_equipo1_rectXZ.midtop = (keeper_equipo1_pos[0]+5,z0-keeper_equipo1_pos[2]-17)
-            seeker_equipo1_rectXZ.midtop = (seeker_equipo1_pos[0]+5,z0-seeker_equipo1_pos[2]-17)
+            runner_equipo1_rectXZ.midtop = (runner_equipo1_pos[0]+5,z0-runner_equipo1_pos[2]-17)
         for c in range (0,1):#equipo 2
             chaser1_equipo2_rect.midtop = (chaser1_equipo2_pos[0]+5, chaser1_equipo2_pos[1]-17)
             chaser2_equipo2_rect.midtop = (chaser2_equipo2_pos[0]+5, chaser2_equipo2_pos[1]-17)
             chaser3_equipo2_rect.midtop = (chaser3_equipo2_pos[0]+5, chaser3_equipo2_pos[1]-17)
 
-            beater1_equipo2_rect.midtop = (beater1_equipo2_pos[0]+5, beater1_equipo2_pos[1]-17)
-            beater2_equipo2_rect.midtop = (beater2_equipo2_pos[0]+5, beater2_equipo2_pos[1]-17)
+            defender1_equipo2_rect.midtop = (defender1_equipo2_pos[0]+5, defender1_equipo2_pos[1]-17)
+            defender2_equipo2_rect.midtop = (defender2_equipo2_pos[0]+5, defender2_equipo2_pos[1]-17)
 
             keeper_equipo2_rect.midtop = (keeper_equipo2_pos[0]+5, keeper_equipo2_pos[1]-17)
-            seeker_equipo2_rect.midtop = (seeker_equipo2_pos[0]+5, seeker_equipo2_pos[1]-17)
+            runner_equipo2_rect.midtop = (runner_equipo2_pos[0]+5, runner_equipo2_pos[1]-17)
             ########PRESPECTIVA XZ
             chaser1_equipo2_rectXZ.midtop = (chaser1_equipo2_pos[0]+5,z0-chaser1_equipo2_pos[2]-17)
             chaser2_equipo2_rectXZ.midtop = (chaser2_equipo2_pos[0]+5,z0-chaser2_equipo2_pos[2]-17)
             chaser3_equipo2_rectXZ.midtop = (chaser3_equipo2_pos[0]+5,z0-chaser3_equipo2_pos[2]-17)
 
-            beater1_equipo2_rectXZ.midtop = (beater1_equipo2_pos[0]+5,z0-beater1_equipo2_pos[2]-17)
-            beater2_equipo2_rectXZ.midtop = (beater2_equipo2_pos[0]+5,z0-beater2_equipo2_pos[2]-17)
+            defender1_equipo2_rectXZ.midtop = (defender1_equipo2_pos[0]+5,z0-defender1_equipo2_pos[2]-17)
+            defender2_equipo2_rectXZ.midtop = (defender2_equipo2_pos[0]+5,z0-defender2_equipo2_pos[2]-17)
 
             keeper_equipo2_rectXZ.midtop = (keeper_equipo2_pos[0]+5,z0-keeper_equipo2_pos[2]-17)
-            seeker_equipo2_rectXZ.midtop = (seeker_equipo2_pos[0]+5,z0-seeker_equipo2_pos[2]-17)
+            runner_equipo2_rectXZ.midtop = (runner_equipo2_pos[0]+5,z0-runner_equipo2_pos[2]-17)
 
      #   pygame.draw.rect(game_window, orange, pygame.Rect(                      #jugador perspectiva xz
     bulldozer1_rect.midtop = (bulldozer1_pos[0]+2, bulldozer1_pos[1]-17)
@@ -247,41 +247,41 @@ def show_score(choice, color, font, size):
             game_window.blit(chaser2_equipo1_surface, chaser2_equipo1_rect)
             game_window.blit(chaser3_equipo1_surface, chaser3_equipo1_rect)
 
-            game_window.blit(beater1_equipo1_surface, beater1_equipo1_rect)
-            game_window.blit(beater2_equipo1_surface, beater2_equipo1_rect)
+            game_window.blit(defender1_equipo1_surface, defender1_equipo1_rect)
+            game_window.blit(defender2_equipo1_surface, defender2_equipo1_rect)
 
             game_window.blit(keeper_equipo1_surface, keeper_equipo1_rect)
-            game_window.blit(seeker_equipo1_surface, seeker_equipo1_rect)
+            game_window.blit(runner_equipo1_surface, runner_equipo1_rect)
                                                                     ########PRESPECTIVA XZ
             game_window.blit(chaser1_equipo1_surface, chaser1_equipo1_rectXZ)
             game_window.blit(chaser2_equipo1_surface, chaser2_equipo1_rectXZ)
             game_window.blit(chaser3_equipo1_surface, chaser3_equipo1_rectXZ)
 
-            game_window.blit(beater1_equipo1_surface, beater1_equipo1_rectXZ)
-            game_window.blit(beater2_equipo1_surface, beater2_equipo1_rectXZ)
+            game_window.blit(defender1_equipo1_surface, defender1_equipo1_rectXZ)
+            game_window.blit(defender2_equipo1_surface, defender2_equipo1_rectXZ)
 
             game_window.blit(keeper_equipo1_surface, keeper_equipo1_rectXZ)
-            game_window.blit(seeker_equipo1_surface, seeker_equipo1_rectXZ)
+            game_window.blit(runner_equipo1_surface, runner_equipo1_rectXZ)
         for c in range (0,1):#equipo 2
             game_window.blit(chaser1_equipo2_surface, chaser1_equipo2_rect)
             game_window.blit(chaser2_equipo2_surface, chaser2_equipo2_rect)
             game_window.blit(chaser3_equipo2_surface, chaser3_equipo2_rect)
 
-            game_window.blit(beater1_equipo2_surface, beater1_equipo2_rect)
-            game_window.blit(beater2_equipo2_surface, beater2_equipo2_rect)
+            game_window.blit(defender1_equipo2_surface, defender1_equipo2_rect)
+            game_window.blit(defender2_equipo2_surface, defender2_equipo2_rect)
 
             game_window.blit(keeper_equipo2_surface, keeper_equipo2_rect)
-            game_window.blit(seeker_equipo2_surface, seeker_equipo2_rect)
+            game_window.blit(runner_equipo2_surface, runner_equipo2_rect)
                                                                     ########PRESPECTIVA XZ
             game_window.blit(chaser1_equipo2_surface, chaser1_equipo2_rectXZ)
             game_window.blit(chaser2_equipo2_surface, chaser2_equipo2_rectXZ)
             game_window.blit(chaser3_equipo2_surface, chaser3_equipo2_rectXZ)
 
-            game_window.blit(beater1_equipo2_surface, beater1_equipo2_rectXZ)
-            game_window.blit(beater2_equipo2_surface, beater2_equipo2_rectXZ)
+            game_window.blit(defender1_equipo2_surface, defender1_equipo2_rectXZ)
+            game_window.blit(defender2_equipo2_surface, defender2_equipo2_rectXZ)
 
             game_window.blit(keeper_equipo2_surface, keeper_equipo2_rectXZ)
-            game_window.blit(seeker_equipo2_surface, seeker_equipo2_rectXZ)
+            game_window.blit(runner_equipo2_surface, runner_equipo2_rectXZ)
     game_window.blit(bulldozer1_surface, bulldozer1_rect)# displaying Score function
 
 #def guardar_IA(identificador):
@@ -496,22 +496,22 @@ def cargar_jugadores():
             print(chaser2_equipo1[0],chaser2_equipo1[1],chaser2_equipo1[3],chaser2_equipo1[2])
             print(chaser3_equipo1[0],chaser3_equipo1[1],chaser3_equipo1[3],chaser3_equipo1[2])
 
-            print(beater1_equipo1[0],beater1_equipo1[1],beater1_equipo1[3],beater1_equipo1[2])
-            print(beater2_equipo1[0],beater2_equipo1[1],beater2_equipo1[3],beater2_equipo1[2])
+            print(defender1_equipo1[0],defender1_equipo1[1],defender1_equipo1[3],defender1_equipo1[2])
+            print(defender2_equipo1[0],defender2_equipo1[1],defender2_equipo1[3],defender2_equipo1[2])
 
             print(keeper_equipo1[0],keeper_equipo1[1],keeper_equipo1[3],keeper_equipo1[2])
-            print(seeker_equipo1[0],seeker_equipo1[1],seeker_equipo1[3],seeker_equipo1[2])
+            print(runner_equipo1[0],runner_equipo1[1],runner_equipo1[3],runner_equipo1[2])
     print ("visitantes",chaser1_equipo2[10])
     for i in range (0,1):
             print(chaser1_equipo2[0],chaser1_equipo2[1],chaser1_equipo2[3],chaser1_equipo2[2])
             print(chaser2_equipo2[0],chaser2_equipo2[1],chaser2_equipo2[3],chaser2_equipo2[2])
             print(chaser3_equipo2[0],chaser3_equipo2[1],chaser3_equipo2[3],chaser3_equipo2[2])
 
-            print(beater1_equipo2[0],beater1_equipo2[1],beater1_equipo2[3],beater1_equipo2[2])
-            print(beater2_equipo2[0],beater2_equipo2[1],beater2_equipo2[3],beater2_equipo2[2])
+            print(defender1_equipo2[0],defender1_equipo2[1],defender1_equipo2[3],defender1_equipo2[2])
+            print(defender2_equipo2[0],defender2_equipo2[1],defender2_equipo2[3],defender2_equipo2[2])
 
             print(keeper_equipo2[0],keeper_equipo2[1],keeper_equipo2[3],keeper_equipo2[2])
-            print(seeker_equipo2[0],seeker_equipo2[1],seeker_equipo2[3],seeker_equipo2[2])
+            print(runner_equipo2[0],runner_equipo2[1],runner_equipo2[3],runner_equipo2[2])
 def chaser1_equipo1_mecanicas():
     global portador_orb_pos,bandera_texto_orb,agarre_orb
     global hx1,hx2,hy1,hy2,hz1,hz2
@@ -680,7 +680,6 @@ def draw():#dibuja todo excepto los numeros   #dibuja casi todo en pantalla
         pygame.draw.rect(game_window, grey, pygame.Rect(#campo de juego
                limite_x, 0, 1, 880))
 
-
     pygame.draw.ellipse(game_window, black2, pygame.Rect(0, 440, 1240, 440))
     for x in range(0,1):#campo de juego x y
         pygame.draw.rect(game_window, grey, pygame.Rect(#campo de juego
@@ -784,31 +783,31 @@ def draw():#dibuja todo excepto los numeros   #dibuja casi todo en pantalla
         chaser3_equipo1_pos[0]+5,z0-chaser3_equipo1_pos[2], 5, 10))
 
     pygame.draw.rect(game_window, green, pygame.Rect(
-        beater1_equipo1_pos[0], beater1_equipo1_pos[1], 5, 10))
+        defender1_equipo1_pos[0], defender1_equipo1_pos[1], 5, 10))
     pygame.draw.rect(game_window, red, pygame.Rect(
-        beater1_equipo1_pos[0]+5, beater1_equipo1_pos[1], 5, 10))
+        defender1_equipo1_pos[0]+5, defender1_equipo1_pos[1], 5, 10))
     pygame.draw.rect(game_window, green, pygame.Rect(             #xz persepctiva
-        beater1_equipo1_pos[0],z0-beater1_equipo1_pos[2], 5, 10))
+        defender1_equipo1_pos[0],z0-defender1_equipo1_pos[2], 5, 10))
     pygame.draw.rect(game_window, red,pygame.Rect(
-        beater1_equipo1_pos[0]+5,z0-beater1_equipo1_pos[2], 5, 10))
+        defender1_equipo1_pos[0]+5,z0-defender1_equipo1_pos[2], 5, 10))
 
     pygame.draw.rect(game_window, green, pygame.Rect(
-        beater2_equipo1_pos[0], beater2_equipo1_pos[1], 5, 10))
+        defender2_equipo1_pos[0], defender2_equipo1_pos[1], 5, 10))
     pygame.draw.rect(game_window, red, pygame.Rect(
-        beater2_equipo1_pos[0]+5, beater2_equipo1_pos[1], 5, 10))
+        defender2_equipo1_pos[0]+5, defender2_equipo1_pos[1], 5, 10))
     pygame.draw.rect(game_window, green, pygame.Rect(             #xz persepctiva
-        beater2_equipo1_pos[0],z0-beater2_equipo1_pos[2], 5, 10))
+        defender2_equipo1_pos[0],z0-defender2_equipo1_pos[2], 5, 10))
     pygame.draw.rect(game_window, red,pygame.Rect(
-        beater2_equipo1_pos[0]+5,z0-beater2_equipo1_pos[2], 5, 10))
+        defender2_equipo1_pos[0]+5,z0-defender2_equipo1_pos[2], 5, 10))
 
     pygame.draw.rect(game_window, cian, pygame.Rect(
-        seeker_equipo1_pos[0], seeker_equipo1_pos[1], 5, 10))
+        runner_equipo1_pos[0], runner_equipo1_pos[1], 5, 10))
     pygame.draw.rect(game_window, red, pygame.Rect(
-        seeker_equipo1_pos[0]+5, seeker_equipo1_pos[1], 5, 10))
+        runner_equipo1_pos[0]+5, runner_equipo1_pos[1], 5, 10))
     pygame.draw.rect(game_window, cian, pygame.Rect(             #xz perspectiva
-        seeker_equipo1_pos[0],z0-seeker_equipo1_pos[2], 5, 10))
+        runner_equipo1_pos[0],z0-runner_equipo1_pos[2], 5, 10))
     pygame.draw.rect(game_window, red, pygame.Rect(
-        seeker_equipo1_pos[0]+5,z0-seeker_equipo1_pos[2], 5, 10))
+        runner_equipo1_pos[0]+5,z0-runner_equipo1_pos[2], 5, 10))
 
 
     pygame.draw.rect(game_window, pink, pygame.Rect(
@@ -850,31 +849,31 @@ def draw():#dibuja todo excepto los numeros   #dibuja casi todo en pantalla
         chaser3_equipo2_pos[0]+5,z0-chaser3_equipo2_pos[2], 5, 10))
 
     pygame.draw.rect(game_window, green, pygame.Rect(
-        beater1_equipo2_pos[0], beater1_equipo2_pos[1], 5, 10))
+        defender1_equipo2_pos[0], defender1_equipo2_pos[1], 5, 10))
     pygame.draw.rect(game_window, blue, pygame.Rect(
-        beater1_equipo2_pos[0]+5, beater1_equipo2_pos[1], 5, 10))
+        defender1_equipo2_pos[0]+5, defender1_equipo2_pos[1], 5, 10))
     pygame.draw.rect(game_window, green, pygame.Rect(            #xz persepctiva
-        beater1_equipo2_pos[0],z0-beater1_equipo2_pos[2], 5, 10))
+        defender1_equipo2_pos[0],z0-defender1_equipo2_pos[2], 5, 10))
     pygame.draw.rect(game_window, blue,pygame.Rect(
-        beater1_equipo2_pos[0]+5,z0-beater1_equipo2_pos[2], 5, 10))
+        defender1_equipo2_pos[0]+5,z0-defender1_equipo2_pos[2], 5, 10))
 
     pygame.draw.rect(game_window, green, pygame.Rect(
-        beater2_equipo2_pos[0], beater2_equipo2_pos[1], 5, 10))
+        defender2_equipo2_pos[0], defender2_equipo2_pos[1], 5, 10))
     pygame.draw.rect(game_window, blue, pygame.Rect(
-        beater2_equipo2_pos[0]+5, beater2_equipo2_pos[1], 5, 10))
+        defender2_equipo2_pos[0]+5, defender2_equipo2_pos[1], 5, 10))
     pygame.draw.rect(game_window, green, pygame.Rect(            #xz persepctiva
-        beater2_equipo2_pos[0],z0-beater2_equipo2_pos[2], 5, 10))
+        defender2_equipo2_pos[0],z0-defender2_equipo2_pos[2], 5, 10))
     pygame.draw.rect(game_window, blue,pygame.Rect(
-        beater2_equipo2_pos[0]+5,z0-beater2_equipo2_pos[2], 5, 10))
+        defender2_equipo2_pos[0]+5,z0-defender2_equipo2_pos[2], 5, 10))
 
     pygame.draw.rect(game_window, cian, pygame.Rect(
-        seeker_equipo2_pos[0], seeker_equipo2_pos[1], 5, 10))
+        runner_equipo2_pos[0], runner_equipo2_pos[1], 5, 10))
     pygame.draw.rect(game_window, blue, pygame.Rect(
-        seeker_equipo2_pos[0]+5, seeker_equipo2_pos[1], 5, 10))
+        runner_equipo2_pos[0]+5, runner_equipo2_pos[1], 5, 10))
     pygame.draw.rect(game_window, cian, pygame.Rect(           #xz perspectiva
-        seeker_equipo2_pos[0],z0-seeker_equipo2_pos[2], 5, 10))
+        runner_equipo2_pos[0],z0-runner_equipo2_pos[2], 5, 10))
     pygame.draw.rect(game_window, blue, pygame.Rect(
-        seeker_equipo2_pos[0]+5,z0-seeker_equipo2_pos[2], 5, 10))
+        runner_equipo2_pos[0]+5,z0-runner_equipo2_pos[2], 5, 10))
 
     pygame.draw.rect(game_window, purple, pygame.Rect(
         keeper_equipo2_pos[0], keeper_equipo2_pos[1], 5, 10))
